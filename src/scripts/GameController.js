@@ -52,10 +52,20 @@ GameController.defineMethod("initView", function () {
  * Resets the game progress
  * Set to level 0
  */
-GameController.defineMethod("resetGame", function () {
+GameController.defineMethod("resetGame", function (resetLevels = false) {
 
-  // Display the first level
-  this.selectLevel(0);
+  let promise = Promise.resolve();
+
+  if (resetLevels !== false) {
+    promise = promise.then(function () {
+      return GameController.generateLevelsAsync(resetLevels);
+    })
+  }
+
+  promise.then(function () {
+    // Display the first level
+    this.selectLevel(0);
+  }.bind(this));
 
 });
 
