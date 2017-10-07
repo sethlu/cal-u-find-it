@@ -71,9 +71,20 @@ gulp.task("pages-watch", ["pages"], function () {
   browserSync.reload();
 });
 
+// Data sets
+
+gulp.task("datasets", function () {
+  return gulp.src("./src/datasets/**/*.json")
+    .pipe(gulp.dest("./dist/datasets"));
+});
+
+gulp.task("datasets-watch", ["datasets"], function () {
+  browserSync.reload();
+});
+
 // Tasks
 
-gulp.task("build", ["compass", "styles", "scripts", "pages"]);
+gulp.task("build", ["compass", "styles", "scripts", "pages", "datasets"]);
 
 gulp.task("proxy", ["build"], function () {
   browserSync.init({
@@ -84,6 +95,7 @@ gulp.task("proxy", ["build"], function () {
   gulp.watch("./src/styles/**", ["styles-watch"]);
   gulp.watch("./src/scripts/**", ["scripts-watch"]);
   gulp.watch("./src/**", ["pages-watch"]);
+  gulp.watch("./src/datasets/**", ["datasets-watch"]);
 });
 
 gulp.task("default", ["proxy"]);
