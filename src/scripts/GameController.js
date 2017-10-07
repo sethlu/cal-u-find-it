@@ -85,7 +85,9 @@ GameController.defineMethod("initView", function () {
 
   }.bind(this));
 
-  this.gameMap = L.map("map");
+  this.gameMap = L.map("map", {
+    zoomControl: false
+  });
 
   L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
     attribution: "Map data &copy; 2017 OpenStreetMap contributors",
