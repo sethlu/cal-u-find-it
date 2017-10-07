@@ -94,10 +94,6 @@ GameController.defineMethod("initView", function () {
   })
     .addTo(this.gameMap);
 
-  // TODO: Use AppController to control game status
-
-  this.resetGame(2);
-
 });
 
 GameController.defineMethod("unhideView", function () {
