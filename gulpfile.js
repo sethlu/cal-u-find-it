@@ -94,7 +94,7 @@ gulp.task("proxy", ["build"], function () {
 
   gulp.watch("./src/styles/**", ["styles-watch"]);
   gulp.watch("./src/scripts/**", ["scripts-watch"]);
-  gulp.watch("./src/**", ["pages-watch"]);
+  gulp.watch("./src/*", ["pages-watch"]);
   gulp.watch("./src/datasets/**", ["datasets-watch"]);
 });
 
