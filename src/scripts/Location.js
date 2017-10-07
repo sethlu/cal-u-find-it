@@ -4,8 +4,8 @@ import {getJSONAsync} from "./util";
 function Location(info) {
 
   this.name = "";
-  this.latitude = 0;
-  this.longitude = 0;
+  this.lat = 0;
+  this.lon = 0;
 
   Object.assign(this, info);
 
