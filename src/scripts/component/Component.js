@@ -72,8 +72,9 @@ Component.defineMethod = function (name, definition) {
 
 Component.applyMethod = function (thisObject, name, args) {
   try {
+    let value;
     if (this.prototype._methods[name]) {
-      let value = this.prototype._methods[name].apply(thisObject, args);
+      value = this.prototype._methods[name].apply(thisObject, args);
     }
     if (this.parentComponent &&
       this.parentComponent.isMethodDefined(name)) {
