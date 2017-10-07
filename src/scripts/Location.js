@@ -16,12 +16,12 @@ Object.assign(Location, {
   getLocationsAsync: (function () {
     let locations;
 
-    return (function () {
+    return function () {
       if (!locations) {
-        locations = getJSONAsync("../locations.json");
+        locations = getJSONAsync("./datasets/locations.json");
       }
       return locations;
-    })();
+    };
   })()
 
 });
