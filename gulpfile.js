@@ -82,9 +82,20 @@ gulp.task("datasets-watch", ["datasets"], function () {
   browserSync.reload();
 });
 
+// Images
+
+gulp.task("images", function () {
+  return gulp.src("./src/images/**/*")
+    .pipe(gulp.dest("./dist/images"));
+});
+
+gulp.task("images-watch", ["images"], function () {
+  browserSync.reload();
+});
+
 // Tasks
 
-gulp.task("build", ["compass", "styles", "scripts", "pages", "datasets"]);
+gulp.task("build", ["compass", "styles", "scripts", "pages", "datasets", "images"]);
 
 gulp.task("proxy", ["build"], function () {
   browserSync.init({
@@ -92,10 +103,11 @@ gulp.task("proxy", ["build"], function () {
     ghostMode: false
   });
 
-  gulp.watch("./src/styles/**", ["styles-watch"]);
-  gulp.watch("./src/scripts/**", ["scripts-watch"]);
-  gulp.watch("./src/*", ["pages-watch"]);
-  gulp.watch("./src/datasets/**", ["datasets-watch"]);
+  gulp.watch("./src/styles/**/*.scss", ["styles-watch"]);
+  gulp.watch("./src/scripts/**/*.js", ["scripts-watch"]);
+  gulp.watch("./src/**/*.html", ["pages-watch"]);
+  gulp.watch("./src/datasets/**/*.json", ["datasets-watch"]);
+  gulp.watch("./src/images/**/*", ["images-watch"]);
 });
 
 gulp.task("default", ["proxy"]);

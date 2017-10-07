@@ -7,7 +7,7 @@
     "region": "Nor",
     "lat": 37.8199,
     "lon": -122.4783,
-    "image": ""
+    "image": "images/locations/golden-gate-bridge.jpg"
   },
   {
     "question": [
@@ -17,7 +17,7 @@
     "region": "LA",
     "lat": 34.0928,
     "lon": -118.3287,
-    "image": ""
+    "image": "images/locations/hollywood-sign.jpg"
   },
   {
     "question": [

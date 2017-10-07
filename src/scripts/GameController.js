@@ -213,7 +213,12 @@ GameController.defineMethod("showLevelLocationSplash", function () {
   splashElement.classList.remove("hidden");
   splashElement.hidden = false;
 
-  splashElement.querySelector(`[data-level-location="name"]`).innerText = this.levels[this.level].locations[0].location;
+  let location = this.levels[this.level].locations[0];
+
+  splashElement.querySelector(".level-location-img").style.backgroundImage = `url(${location.image})`;
+  splashElement.querySelector(".level-location-name").innerText = location.location;
+  splashElement.querySelector(".level-location-coords").innerText =
+    `${Math.abs(location.lat)}° ${location.lat >= 0 ? "N" : "S"}, ${Math.abs(location.lon)}° ${location.lon >= 0 ? "E" : "W"}`;
 
 });
 
