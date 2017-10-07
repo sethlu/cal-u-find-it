@@ -82,6 +82,15 @@ GameController.defineMethod("initView", function () {
 
 });
 
+GameController.defineMethod("unhideView", function () {
+
+  // Refresh the map
+  setTimeout(function () {
+    this.gameMap.invalidateSize();
+  }.bind(this), 1);
+
+});
+
 /**
  * Resets the game progress
  * Set to level 0

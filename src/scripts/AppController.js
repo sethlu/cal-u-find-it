@@ -10,14 +10,30 @@ AppController.defineMethod("initView", function () {
   // Views
 
   let views = new Set(["home", "game"]);
-  let activeView = "game";
+  let activeView = "home";
 
   views.forEach(function (view) {
     this.view.querySelector(`.view.${view}`).hidden = view !== activeView;
   }, this);
 
+  // Home view
+  let homeController = new Controller(this.view.querySelector(".view.home"));
+
   // Game view
-  let gameController = new GameController(this.view.querySelector(`.view.game`));
+  let gameController = new GameController(this.view.querySelector(".view.game"));
+
+  this.view.querySelector(".view.home .game-play").addEventListener("click", function () {
+
+    // Hide home
+    homeController.hideView();
+
+    // Reset a 5-level game
+    gameController.resetGame(5);
+
+    // Show game view
+    gameController.unhideView();
+
+  }.bind(this));
 
 });
 
