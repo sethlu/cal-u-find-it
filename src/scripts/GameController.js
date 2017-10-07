@@ -72,7 +72,7 @@ GameController.defineMethod("nextLevel", function () {
  */
 GameController.defineMethod("selectLevel", function (level) {
 
-  if (level >= this.levels.length - 1) return false;
+  if (level >= this.levels.length) return false;
 
   // Unset the graphics for the current level
 
