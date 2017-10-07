@@ -52,6 +52,33 @@ GameController.defineMethod("init", function () {
  * Init the game view
  */
 GameController.defineMethod("initView", function () {
+  if (!this.view) return;
+
+  this.view.querySelector(".level-location-splash").hidden = true;
+
+  this.view.querySelector(".level-next").addEventListener("click", function () {
+
+    this.hideLevelLocationSplash();
+
+    if (!this.nextLevel()) {
+      // TODO: Reached the end of the game
+      console.log("End of the game");
+    }
+
+  }.bind(this));
+
+  this.gameMap = L.map("map");
+
+  L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
+    attribution: "Map data &copy; 2017 OpenStreetMap contributors",
+    minZoom: "5",
+    maxZoom: "7"
+  })
+    .addTo(this.gameMap);
+
+  // TODO: Use AppController to control game status
+
+  this.resetGame(2);
 
 });
 
@@ -65,11 +92,14 @@ GameController.defineMethod("resetGame", function (resetLevels = false) {
 
   if (resetLevels !== false) {
     promise = promise.then(function () {
-      return GameController.generateLevelsAsync(resetLevels);
-    })
+      return GameController.generateLevelsAsync(resetLevels)
+        .then(function (levels) {
+          this.levels = levels;
+        }.bind(this));
+    }.bind(this))
   }
 
-  promise.then(function () {
+  return promise.then(function () {
     // Display the first level
     this.selectLevel(0);
   }.bind(this));
@@ -106,19 +136,54 @@ GameController.defineMethod("selectLevel", function (level) {
 
   // Set the graphics for the new level
 
-  let game_map = L.map('map').setView([36.7783, -119.4179], 6);
-  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png', {attribution: 'Map data &copy; 2017 OpenStreetMap contributors', minZoom: '5', maxZoom: '7'}).addTo(game_map);
-
+  this.gameMap.setView([36.7783, -119.4179], 6);
 
   let {question, locations} = this.levels[this.level];
 
   for (let i = 0; i < locations.length; i++) {
     let marker = L.marker([locations[i].lat, locations[i].lon]);
     this.locMarkers.push(marker);
-    marker.addTo(game_map);
+    marker.addTo(this.gameMap);
+
+    marker.on("click", function () {
+      if (i === 0) {
+        this.showLevelLocationSplash();
+      } else {
+        // TODO: Probably give time penalty
+        alert("Try the other one(s)");
+      }
+    }.bind(this));
 
   }
 
+  return true; // Changed to the level selected
+
+});
+
+/**
+ * Display a splash screen for the location of the level
+ * The button directs to a next level, or to a finishing screen
+ */
+GameController.defineMethod("showLevelLocationSplash", function () {
+
+  let splashElement = this.view.querySelector(".level-location-splash");
+
+  splashElement.classList.remove("hidden");
+  splashElement.hidden = false;
+
+  splashElement.querySelector(`[data-level-location="name"]`).innerText = this.levels[this.level].locations[0].location;
+
+});
+
+/**
+ * Hides the splash screen
+ */
+GameController.defineMethod("hideLevelLocationSplash", function () {
+
+  let splashElement = this.view.querySelector(".level-location-splash");
+
+  splashElement.classList.add("hidden");
+  splashElement.hidden = true;
 
 });
 
