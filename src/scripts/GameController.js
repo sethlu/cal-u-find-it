@@ -21,6 +21,13 @@ GameController.generateLevelsAsync = function (numLevels = 5) {
           locations[1]
         ]
       }));
+      levels.push(new Level({
+        question: locations[2].question[0],
+        locations: [
+          locations[2],
+          locations[3]
+        ]
+      }));
 
       return levels;
     });
