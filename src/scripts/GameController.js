@@ -136,9 +136,11 @@ GameController.defineMethod("selectLevel", function (level) {
 
   // Set the graphics for the new level
 
-  this.gameMap.setView([36.7783, -119.4179], 6);
-
   let {question, locations} = this.levels[this.level];
+
+  this.view.querySelector(`[data-level="prompt"]`).innerText = question;
+
+  this.gameMap.setView([36.7783, -119.4179], 6);
 
   for (let i = 0; i < locations.length; i++) {
     let marker = L.marker([locations[i].lat, locations[i].lon]);
