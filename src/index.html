@@ -8,6 +8,13 @@
     <script src="http://npmcdn.com/leaflet@1.2.0/dist/leaflet.js"></script>
   </head>
   <body>
+    <div hidden>
+      <template id="template-game-level-stats">
+        <div class="level-stats">
+          <h3 data-level-location="name"></h3>
+        </div>
+      </template>
+    </div>
     <div class="view home">
       <button class="game-play">Play</button>
     </div>
@@ -27,6 +34,10 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="view game-stats">
+      <h2>Stats</h2>
+      <div class="levels-stats"></div>
     </div>
   </body>
 </html>

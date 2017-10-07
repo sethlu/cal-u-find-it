@@ -2,6 +2,8 @@
 import {Controller} from "./component/Controller";
 import {Location} from "./Location";
 import {Level} from "./Level";
+import {GameStats} from "./GameStats";
+import {LevelStats} from "./LevelStats";
 
 let GameController = Controller.createComponent("GameController");
 
@@ -44,6 +46,11 @@ GameController.defineMethod("init", function () {
   /** A list of levels */
   this.levels = [];
 
+  /** Game stats */
+  this.gameStats = new GameStats();
+
+  // Map rendering
+
   this.locMarkers = [];
 
 });
@@ -61,8 +68,19 @@ GameController.defineMethod("initView", function () {
     this.hideLevelLocationSplash();
 
     if (!this.nextLevel()) {
-      // TODO: Reached the end of the game
-      console.log("End of the game");
+
+      let appController = this.componentOf;
+
+      // Hide game
+      this.hideView();
+
+      // Update game stats
+      appController.gameStatsController.gameStats = this.gameStats;
+      appController.gameStatsController.updateView(); // Force update view
+
+      // Show game stats
+      appController.gameStatsController.unhideView();
+
     }
 
   }.bind(this));
@@ -107,6 +125,9 @@ GameController.defineMethod("resetGame", function (resetLevels = false) {
         }.bind(this));
     }.bind(this))
   }
+
+  // Clear game stats
+  this.gameStats.resetStats();
 
   return promise.then(function () {
     // Display the first level
@@ -158,7 +179,17 @@ GameController.defineMethod("selectLevel", function (level) {
 
     marker.on("click", function () {
       if (i === 0) {
+
+        // Record level stats
+        this.gameStats.recordLevelStats(
+          this.level,
+          new LevelStats(this.levels[this.level], {
+            timeRemaining: 1 // 1 sec remaining from game
+          })
+        );
+
         this.showLevelLocationSplash();
+
       } else {
         // TODO: Probably give time penalty
         alert("Try the other one(s)");

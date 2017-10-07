@@ -1,5 +1,5 @@
 
-function getJSONAsync(url) {
+export function getJSONAsync(url) {
   return new Promise(function (resolve, reject) {
     let request = new XMLHttpRequest();
     function transferCompleted() {
@@ -17,4 +17,8 @@ function getJSONAsync(url) {
   });
 }
 
-export {getJSONAsync};
+export function clearChildNodes(node) {
+  while (node.hasChildNodes()) {
+    node.removeChild(node.lastChild);
+  }
+}

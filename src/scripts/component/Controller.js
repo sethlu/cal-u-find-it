@@ -155,4 +155,4 @@ function cloneTemplate(selector) {
   return document.importNode(template.content, true);
 }
 
-export {Controller};
+export {Controller, cloneTemplate};

@@ -1,6 +1,7 @@
 
 import {Controller} from "./component/Controller";
 import {GameController} from "./GameController";
+import {GameStatsController} from "./GameStatsController";
 
 let AppController = Controller.createComponent("AppController");
 
@@ -9,7 +10,7 @@ AppController.defineMethod("initView", function () {
 
   // Views
 
-  let views = new Set(["home", "game"]);
+  let views = new Set(["home", "game", "game-stats"]);
   let activeView = "home";
 
   views.forEach(function (view) {
@@ -17,21 +18,27 @@ AppController.defineMethod("initView", function () {
   }, this);
 
   // Home view
-  let homeController = new Controller(this.view.querySelector(".view.home"));
+  this.homeController = new Controller(this.view.querySelector(".view.home"));
+  this.homeController.componentOf = this;
 
   // Game view
-  let gameController = new GameController(this.view.querySelector(".view.game"));
+  this.gameController = new GameController(this.view.querySelector(".view.game"));
+  this.gameController.componentOf = this;
+
+  // Game stats view
+  this.gameStatsController = new GameStatsController(null, this.view.querySelector(".view.game-stats"));
+  this.gameStatsController.componentOf = this;
 
   this.view.querySelector(".view.home .game-play").addEventListener("click", function () {
 
     // Hide home
-    homeController.hideView();
+    this.homeController.hideView();
 
     // Reset a 5-level game
-    gameController.resetGame(5);
+    this.gameController.resetGame(5);
 
     // Show game view
-    gameController.unhideView();
+    this.gameController.unhideView();
 
   }.bind(this));
 
