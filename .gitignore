@@ -1,8 +1,13 @@
 
 .idea
+
 tmp
+dist
+
+config.json
 
 node_modules
 npm-debug.log
 
 .sass-cache
+
