@@ -1,4 +1,6 @@
 
+import {getJSONAsync} from "./util";
+
 function Location(info) {
 
   this.name = "";
