@@ -7,6 +7,38 @@ let GameStatsController = SingleModelController.createComponent("GameStatsContro
 
 GameStatsController.defineAlias("model", "gameStats");
 
+GameStatsController.defineMethod("initView", function () {
+  if (!this.view) return;
+
+  this.view.querySelector(".game-replay").addEventListener("click", function () {
+
+    let appController = this.componentOf;
+
+    // Hide the current view
+    this.hideView();
+
+    // Reset a game with same amount of levels
+    appController.gameController.resetGame(appController.gameController.levels.length);
+
+    // Show game view
+    appController.gameController.unhideView();
+
+  }.bind(this));
+
+  this.view.querySelector(".game-home").addEventListener("click", function () {
+
+    let appController = this.componentOf;
+
+    // Hide the current view
+    this.hideView();
+
+    // Show home view
+    appController.homeController.unhideView();
+
+  }.bind(this));
+
+});
+
 GameStatsController.defineMethod("updateView", function () {
   if (!this.view) return;
 
