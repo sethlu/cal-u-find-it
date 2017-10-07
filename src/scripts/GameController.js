@@ -1,7 +1,29 @@
 
 import {Component} from "./component/Component";
+import {Level} from "./Level";
 
 let GameController = Component.createComponent("GameController");
+
+/**
+ * Generates a list of levels
+ */
+GameController.generateLevelsAsync = function (numLevels = 5) {
+  return Location.getLocationsAsync()
+    .then(function (locations) {
+      let levels = [];
+
+      // TODO: Actually generate levels
+      levels.push(new Level({
+        question: locations[0].question[0],
+        locations: [
+          locations[0],
+          locations[1]
+        ]
+      }));
+
+      return levels;
+    });
+};
 
 /**
  * Init the game controller
