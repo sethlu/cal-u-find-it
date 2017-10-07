@@ -45,11 +45,23 @@ GameController.defineMethod("nextLevel", function () {
 
 });
 
+/**
+ * Switches to a level
+ */
 GameController.defineMethod("selectLevel", function (level) {
 
   if (level >= this.levels.length - 1) return false;
 
-  // Changing the graphics
+  // Unset the graphics for the current level
+
+
+
+  // Switch to new level
+  this.level = level;
+
+  // Set the graphics for the new level
+
+
 
 });
 
