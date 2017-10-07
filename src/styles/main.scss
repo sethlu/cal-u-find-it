@@ -12,11 +12,11 @@ body {
 }
 
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 .hidden {
-  opacity: 0;
+  opacity: 0 !important;
 }
 
 // Views
