@@ -150,7 +150,7 @@ function removeElementProperty(element, property) {
   delete element[property];
 }
 
-function cloneTemplate (selector) {
+function cloneTemplate(selector) {
   let template = document.querySelector(selector);
   return document.importNode(template.content, true);
 }
