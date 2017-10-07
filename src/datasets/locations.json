@@ -4,9 +4,9 @@
       "Where is one of the longest suspension bridge?"
     ],
     "location": "Golden Gate Bridge",
-    "region": "Nor ",
-    "lat": "37.8199",
-    "lon": "-122.4783",
+    "region": "Nor",
+    "lat": 37.8199,
+    "lon": -122.4783,
     "image": ""
   },
   {
@@ -15,8 +15,8 @@
     ],
     "location": "Hollywood Sign",
     "region": "LA",
-    "lat": "34.0928",
-    "lon": "118.3287",
+    "lat": 34.0928,
+    "lon": 118.3287,
     "image": ""
   },
   {
@@ -26,8 +26,8 @@
     ],
     "location": "UC Berkeley",
     "region": "Nor",
-    "lat": "37.8719",
-    "lon": "-122.2585",
+    "lat": 37.8719,
+    "lon": -122.2585,
     "image": ""
   },
   {
@@ -36,8 +36,8 @@
     ],
     "location": "Stanford",
     "region": "Nor",
-    "lat": "37.4275",
-    "lon": "-122.1697",
+    "lat": 37.4275,
+    "lon": -122.1697,
     "image": ""
   },
   {
@@ -46,8 +46,8 @@
     ],
     "location": "Disneyland ",
     "region": "LA",
-    "lat": "33.8121",
-    "lon": "-117.919",
+    "lat": 33.8121,
+    "lon": -117.919,
     "image": ""
   },
   {
@@ -56,8 +56,8 @@
     ],
     "location": "Yosemite National Park",
     "region": "Nor",
-    "lat": "37.8651",
-    "lon": "-119.5383",
+    "lat": 37.8651,
+    "lon": -119.5383,
     "image": ""
   },
   {
@@ -67,8 +67,8 @@
     ],
     "location": "Death Valley National Park",
     "region": "Central",
-    "lat": "36.5323",
-    "lon": "-116.9325",
+    "lat": 36.5323,
+    "lon": -116.9325,
     "image": ""
   },
   {
@@ -78,8 +78,8 @@
     ],
     "location": "Chinatown (San Francisco)",
     "region": "Nor",
-    "lat": "37.7941",
-    "lon": "-122.4078",
+    "lat": 37.7941,
+    "lon": -122.4078,
     "image": ""
   },
   {
@@ -88,8 +88,8 @@
     ],
     "location": "Chinatown (Los Angeles)",
     "region": "LA",
-    "lat": "34.0623",
-    "lon": "-118.2383",
+    "lat": 34.0623,
+    "lon": -118.2383,
     "image": ""
   },
   {
@@ -98,8 +98,8 @@
     ],
     "location": "Hearst Castle",
     "region": "Central",
-    "lat": "35.6852",
-    "lon": "-121.1682",
+    "lat": 35.6852,
+    "lon": -121.1682,
     "image": ""
   },
   {
@@ -109,8 +109,8 @@
     ],
     "location": "Fisherman's Wharf",
     "region": "Nor",
-    "lat": "37.808",
-    "lon": "-122.4177",
+    "lat": 37.808,
+    "lon": -122.4177,
     "image": ""
   },
   {
@@ -119,8 +119,8 @@
     ],
     "location": "Alcatraz",
     "region": "Nor",
-    "lat": "37.8267",
-    "lon": "-122.423",
+    "lat": 37.8267,
+    "lon": -122.423,
     "image": ""
   },
   {
@@ -129,8 +129,8 @@
     ],
     "location": "Santa Cruz Beach Boardwalk",
     "region": "Nor",
-    "lat": "36.9643",
-    "lon": "-122.0189",
+    "lat": 36.9643,
+    "lon": -122.0189,
     "image": ""
   },
   {
@@ -139,8 +139,8 @@
     ],
     "location": "Santa Monica Pier",
     "region": "LA",
-    "lat": "34.0114",
-    "lon": "-118.4949",
+    "lat": 34.0114,
+    "lon": -118.4949,
     "image": ""
   },
   {
@@ -149,8 +149,8 @@
     ],
     "location": "USS Midway Museum",
     "region": "SD",
-    "lat": "32.7137",
-    "lon": "-117.1751",
+    "lat": 32.7137,
+    "lon": -117.1751,
     "image": ""
   },
   {
@@ -159,8 +159,8 @@
     ],
     "location": "Solvang",
     "region": "Central",
-    "lat": "34.5958",
-    "lon": "-120.1376",
+    "lat": 34.5958,
+    "lon": -120.1376,
     "image": ""
   },
   {
@@ -170,8 +170,8 @@
     ],
     "location": "Joshua Tree National Park",
     "region": "SD",
-    "lat": "33.8734",
-    "lon": "-115.901",
+    "lat": 33.8734,
+    "lon": -115.901,
     "image": ""
   },
   {
@@ -180,8 +180,8 @@
     ],
     "location": "Big Bear Lake",
     "region": "LA",
-    "lat": "34.2439",
-    "lon": "-116.9114",
+    "lat": 34.2439,
+    "lon": -116.9114,
     "image": ""
   },
   {
@@ -190,8 +190,8 @@
     ],
     "location": "Lake Tahoe",
     "region": "Nor",
-    "lat": "39.0968",
-    "lon": "-120.0324",
+    "lat": 39.0968,
+    "lon": -120.0324,
     "image": ""
   },
   {
@@ -201,8 +201,8 @@
     ],
     "location": "Redwood National and State Park",
     "region": "Nor",
-    "lat": "41.2132",
-    "lon": "-124.0046",
+    "lat": 41.2132,
+    "lon": -124.0046,
     "image": ""
   },
   {
@@ -211,8 +211,8 @@
     ],
     "location": "Venice Boardwalk",
     "region": "LA",
-    "lat": "33.985",
-    "lon": "-118.4695",
+    "lat": 33.985,
+    "lon": -118.4695,
     "image": ""
   },
   {
@@ -221,8 +221,8 @@
     ],
     "location": "Flower Fields at Carlsbad",
     "region": "SD",
-    "lat": "33.123",
-    "lon": "-117.3176",
+    "lat": 33.123,
+    "lon": -117.3176,
     "image": ""
   },
   {
@@ -232,8 +232,8 @@
     ],
     "location": "Old Town San Diego State Historic Park",
     "region": "SD",
-    "lat": "32.7542",
-    "lon": "-117.197",
+    "lat": 32.7542,
+    "lon": -117.197,
     "image": ""
   },
   {
@@ -242,8 +242,8 @@
     ],
     "location": "Los Angeles Zoo",
     "region": "LA",
-    "lat": "34.1486",
-    "lon": "-118.284",
+    "lat": 34.1486,
+    "lon": -118.284,
     "image": ""
   },
   {
@@ -252,8 +252,8 @@
     ],
     "location": "San Diego Zoo",
     "region": "SD",
-    "lat": "32.7353",
-    "lon": "-117.149",
+    "lat": 32.7353,
+    "lon": -117.149,
     "image": ""
   },
   {
@@ -262,8 +262,8 @@
     ],
     "location": "Montery Bay Aquarium",
     "region": "Nor",
-    "lat": "36.6183",
-    "lon": "-121.9018",
+    "lat": 36.6183,
+    "lon": -121.9018,
     "image": ""
   },
   {
@@ -272,8 +272,8 @@
     ],
     "location": "Lombard Street",
     "region": "Nor",
-    "lat": "37.773972",
-    "lon": "-122.431297",
+    "lat": 37.773972,
+    "lon": -122.431297,
     "image": ""
   }
 ]
