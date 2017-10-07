@@ -1,1 +1,279 @@
-[{"question":"Where is one of the longest suspension bridge? ","location":"Golden Gate Bridge","region":"Nor ","lat":"37.8199","lon":"-122.4783","image":""},{"question":"When you visit me, you know will know where you are at by just looking towards the hills.","location":"Hollywood Sign","region":"LA","lat":"34.0928","lon":"118.3287","image":""},{"question":"Where is the number 1 public university in the world?; Where is the tallest tower located ?","location":"UC Berkeley","region":"Nor","lat":"37.8719","lon":"-122.2585","image":""},{"question":"What school has a tree for a mascot?","location":"Stanford","region":"Nor","lat":"37.4275","lon":"-122.1697","image":""},{"question":"Where is the \"Happiest Place on Earth\"?;  ","location":"Disneyland ","region":"LA","lat":"33.8121","lon":"-117.919","image":""},{"question":"Where is El Capitan located?","location":"Yosemite National Park","region":"Nor","lat":"37.8651","lon":"-119.5383","image":""},{"question":"Where are the ghost towns located?; You will need a lot water with when you visit me to keep yourself hydrated.","location":"Death Valley National Park","region":"Central","lat":"36.5323","lon":"-116.9325","image":""},{"question":"Where is the oldest Chinatown in North America?; I am the place where most Chinese immigrants went to during the Chinese Migration","location":"Chinatown (San Francisco)","region":"Nor","lat":"37.7941","lon":"-122.4078","image":""},{"question":"Come visit me if you want to taste some good Chinese cuisine","location":"Chinatown (Los Angeles)","region":"LA","lat":"34.0623","lon":"-118.2383","image":""},{"question":"Central California barely has any famous places, but this castle stands out the most.","location":"Hearst Castle","region":"Central","lat":"35.6852","lon":"-121.1682","image":""},{"question":"Where can you take a cable cart to buy clam chowder soup?; If you come and visit, you will see a colony of sea lions. ","location":"Fisherman's Wharf","region":"Nor","lat":"37.808","lon":"-122.4177","image":""},{"question":"I use to keep all of the most infamous criminals that ever lived. ","location":"Alcatraz","region":"Nor","lat":"37.8267","lon":"-122.423","image":""},{"question":"Where can you experience both the beach and a theme park at the same time?","location":"Santa Cruz Beach Boardwalk","region":"Nor","lat":"36.9643","lon":"-122.0189","image":""},{"question":"Where is the end of Route 66 located? ","location":"Santa Monica Pier","region":"LA","lat":"34.0114","lon":"-118.4949","image":""},{"question":"Where is one of U.S. longest-serving aircraft carrier located?","location":"USS Midway Museum","region":"SD","lat":"32.7137","lon":"-117.1751","image":""},{"question":"Where can you go to see what Denmark looks like?","location":"Solvang","region":"Central","lat":"34.5958","lon":"-120.1376","image":""},{"question":"I am very close to where Coachella is held.; I am a bit higher than the Mojave Desert, but lower than the Colorado Desert","location":"Joshua Tree National Park","region":"SD","lat":"33.8734","lon":"-115.901","image":""},{"question":"Where do people from Los Angeles go to experience snow?","location":"Big Bear Lake","region":"LA","lat":"34.2439","lon":"-116.9114","image":""},{"question":"Where do people from Northern California go to experience snow?","location":"Lake Tahoe","region":"Nor","lat":"39.0968","lon":"-120.0324","image":""},{"question":"Where are the tallest trees in California located?; I preserve indigenous faunas and floras","location":"Redwood National and State Park","region":"Nor","lat":"41.2132","lon":"-124.0046","image":""},{"question":"Where is \"Muscle Beach\" located? Come visit me and you will see a lot of impressive street performers.","location":"Venice Boardwalk","region":"LA","lat":"33.985","lon":"-118.4695","image":""},{"question":"During the spring time, I am filled with a lot of beautiful flowers","location":"Flower Fields at Carlsbad","region":"SD","lat":"33.123","lon":"-117.3176","image":""},{"question":"Where is the first European settlement in western United States?; I am filled with delicious Mexican food.","location":"Old Town San Diego State Historic Park","region":"SD","lat":"32.7542","lon":"-117.197","image":""},{"question":"In addition to animals, I also have a Botanical Garden","location":"Los Angeles Zoo","region":"LA","lat":"34.1486","lon":"-118.284","image":""},{"question":"I have more animals than any other zoo in California. ","location":"San Diego Zoo","region":"SD","lat":"32.7353","lon":"-117.149","image":""},{"question":"Where can you go to see varieties of sea creatures?","location":"Montery Bay Aquarium","region":"Nor","lat":"36.6183","lon":"-121.9018","image":""},{"question":"You can only go through my streets by twisting and turning down the hills","location":"Lombard Street","region":"Nor","lat":"37.773972","lon":"-122.431297","image":""}]
+[
+  {
+    "question": [
+      "Where is one of the longest suspension bridge?"
+    ],
+    "location": "Golden Gate Bridge",
+    "region": "Nor ",
+    "lat": "37.8199",
+    "lon": "-122.4783",
+    "image": ""
+  },
+  {
+    "question": [
+      "When you visit me, you know will know where you are at by just looking towards the hills."
+    ],
+    "location": "Hollywood Sign",
+    "region": "LA",
+    "lat": "34.0928",
+    "lon": "118.3287",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is the number 1 public university in the world?",
+      "Where is the tallest tower located ?"
+    ],
+    "location": "UC Berkeley",
+    "region": "Nor",
+    "lat": "37.8719",
+    "lon": "-122.2585",
+    "image": ""
+  },
+  {
+    "question": [
+      "What school has a tree for a mascot?"
+    ],
+    "location": "Stanford",
+    "region": "Nor",
+    "lat": "37.4275",
+    "lon": "-122.1697",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is the \"Happiest Place on Earth\"?"
+    ],
+    "location": "Disneyland ",
+    "region": "LA",
+    "lat": "33.8121",
+    "lon": "-117.919",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is El Capitan located?"
+    ],
+    "location": "Yosemite National Park",
+    "region": "Nor",
+    "lat": "37.8651",
+    "lon": "-119.5383",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where are the ghost towns located?",
+      "You will need a lot water with when you visit me to keep yourself hydrated."
+    ],
+    "location": "Death Valley National Park",
+    "region": "Central",
+    "lat": "36.5323",
+    "lon": "-116.9325",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is the oldest Chinatown in North America?",
+      "I am the place where most Chinese immigrants went to during the Chinese Migration"
+    ],
+    "location": "Chinatown (San Francisco)",
+    "region": "Nor",
+    "lat": "37.7941",
+    "lon": "-122.4078",
+    "image": ""
+  },
+  {
+    "question": [
+      "Come visit me if you want to taste some good Chinese cuisine"
+    ],
+    "location": "Chinatown (Los Angeles)",
+    "region": "LA",
+    "lat": "34.0623",
+    "lon": "-118.2383",
+    "image": ""
+  },
+  {
+    "question": [
+      "Central California barely has any famous places, but this castle stands out the most."
+    ],
+    "location": "Hearst Castle",
+    "region": "Central",
+    "lat": "35.6852",
+    "lon": "-121.1682",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where can you take a cable cart to buy clam chowder soup?",
+      "If you come and visit, you will see a colony of sea lions."
+    ],
+    "location": "Fisherman's Wharf",
+    "region": "Nor",
+    "lat": "37.808",
+    "lon": "-122.4177",
+    "image": ""
+  },
+  {
+    "question": [
+      "I use to keep all of the most infamous criminals that ever lived."
+    ],
+    "location": "Alcatraz",
+    "region": "Nor",
+    "lat": "37.8267",
+    "lon": "-122.423",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where can you experience both the beach and a theme park at the same time?"
+    ],
+    "location": "Santa Cruz Beach Boardwalk",
+    "region": "Nor",
+    "lat": "36.9643",
+    "lon": "-122.0189",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is the end of Route 66 located?"
+    ],
+    "location": "Santa Monica Pier",
+    "region": "LA",
+    "lat": "34.0114",
+    "lon": "-118.4949",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is one of U.S. longest-serving aircraft carrier located?"
+    ],
+    "location": "USS Midway Museum",
+    "region": "SD",
+    "lat": "32.7137",
+    "lon": "-117.1751",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where can you go to see what Denmark looks like?"
+    ],
+    "location": "Solvang",
+    "region": "Central",
+    "lat": "34.5958",
+    "lon": "-120.1376",
+    "image": ""
+  },
+  {
+    "question": [
+      "I am very close to where Coachella is held.",
+      "I am a bit higher than the Mojave Desert, but lower than the Colorado Desert"
+    ],
+    "location": "Joshua Tree National Park",
+    "region": "SD",
+    "lat": "33.8734",
+    "lon": "-115.901",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where do people from Los Angeles go to experience snow?"
+    ],
+    "location": "Big Bear Lake",
+    "region": "LA",
+    "lat": "34.2439",
+    "lon": "-116.9114",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where do people from Northern California go to experience snow?"
+    ],
+    "location": "Lake Tahoe",
+    "region": "Nor",
+    "lat": "39.0968",
+    "lon": "-120.0324",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where are the tallest trees in California located?",
+      "I preserve indigenous faunas and floras"
+    ],
+    "location": "Redwood National and State Park",
+    "region": "Nor",
+    "lat": "41.2132",
+    "lon": "-124.0046",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is \"Muscle Beach\" located? Come visit me and you will see a lot of impressive street performers."
+    ],
+    "location": "Venice Boardwalk",
+    "region": "LA",
+    "lat": "33.985",
+    "lon": "-118.4695",
+    "image": ""
+  },
+  {
+    "question": [
+      "During the spring time, I am filled with a lot of beautiful flowers"
+    ],
+    "location": "Flower Fields at Carlsbad",
+    "region": "SD",
+    "lat": "33.123",
+    "lon": "-117.3176",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where is the first European settlement in western United States?",
+      "I am filled with delicious Mexican food."
+    ],
+    "location": "Old Town San Diego State Historic Park",
+    "region": "SD",
+    "lat": "32.7542",
+    "lon": "-117.197",
+    "image": ""
+  },
+  {
+    "question": [
+      "In addition to animals, I also have a Botanical Garden"
+    ],
+    "location": "Los Angeles Zoo",
+    "region": "LA",
+    "lat": "34.1486",
+    "lon": "-118.284",
+    "image": ""
+  },
+  {
+    "question": [
+      "I have more animals than any other zoo in California."
+    ],
+    "location": "San Diego Zoo",
+    "region": "SD",
+    "lat": "32.7353",
+    "lon": "-117.149",
+    "image": ""
+  },
+  {
+    "question": [
+      "Where can you go to see varieties of sea creatures?"
+    ],
+    "location": "Montery Bay Aquarium",
+    "region": "Nor",
+    "lat": "36.6183",
+    "lon": "-121.9018",
+    "image": ""
+  },
+  {
+    "question": [
+      "You can only go through my streets by twisting and turning down the hills"
+    ],
+    "location": "Lombard Street",
+    "region": "Nor",
+    "lat": "37.773972",
+    "lon": "-122.431297",
+    "image": ""
+  }
+]
