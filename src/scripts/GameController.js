@@ -1,8 +1,8 @@
 
-import {Component} from "./component/Component";
+import {Controller} from "./component/Controller";
 import {Level} from "./Level";
 
-let GameController = Component.createComponent("GameController");
+let GameController = Controller.createComponent("GameController");
 
 /**
  * Generates a list of levels
