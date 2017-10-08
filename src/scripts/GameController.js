@@ -402,7 +402,7 @@ GameController.defineMethod("showLevelLocationSplash", function () {
     .then(function (json) {
       let pages = Object.values(json.query.pages);
       if (pages.length > 0 && pages[0].extract)
-        splashElement.querySelector(".level-location-wikipedia.summary").innerText = pages[0].extract.substr(0, pages[0].extract.indexOf("\n"));
+        splashElement.querySelector(".level-location-wikipedia .summary").innerText = pages[0].extract.substr(0, pages[0].extract.indexOf("\n"));
     });
 
   setTimeout(function () {
