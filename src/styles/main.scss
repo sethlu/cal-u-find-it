@@ -215,6 +215,12 @@ button {
     }
 
     .level-stats {
+      transition: opacity ease 0.3s, transform ease 0.3s;
+
+      &.hidden {
+        opacity: 0;
+        transform: translate3d(0, 8px, 0);
+      }
 
       .level-prompt {
         margin: 1em 0 0;
