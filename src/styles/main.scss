@@ -265,6 +265,8 @@ button {
           flex: 1 1 auto;
           overflow-y: scroll;
           -webkit-overflow-scrolling: touch;
+          -webkit-backface-visibility: hidden;
+          -webkit-transform: translate3d(0, 0, 0);
         }
 
         .level-location-info {
@@ -299,6 +301,8 @@ button {
     padding: 2em 2em 3.5em 2em;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
 
     .container {
       width: 40em;
