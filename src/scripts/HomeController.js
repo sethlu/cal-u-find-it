@@ -25,4 +25,13 @@ HomeController.defineMethod("initView", function () {
 
 });
 
+HomeController.defineMethod("unhideView", function () {
+
+  // Refresh the map
+  setTimeout(function () {
+    this.homeMap.invalidateSize();
+  }.bind(this), 1);
+
+});
+
 export {HomeController};
