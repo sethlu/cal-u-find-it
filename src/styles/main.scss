@@ -156,6 +156,7 @@ button {
       left: 0;
       z-index: 2;
       padding: 1em;
+      pointer-events: none;
 
       > .prompt {
         display: block;
@@ -182,6 +183,7 @@ button {
       position: fixed;
       bottom: 0;
       transition: margin-left .5s;
+      pointer-events: none;
 
       &.play {
         animation-name: slide-in;
