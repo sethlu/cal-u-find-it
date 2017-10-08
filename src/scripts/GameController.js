@@ -39,8 +39,9 @@ GameController.generateLevelsAsync = function (numLevels = 5) {
       // TODO: If successful in making multiple questions for each location, random number generator needs to be created.
 
       for (let i = 0; i < numLevels; i++) {
+        let mixedQuestion = randomGenerator(mixedLocation[i].question);
         levels.push(new Level({
-          question: mixedLocation[i].question[0],
+          question: mixedQuestion[0],
           locations: [
             mixedLocation[i]
           ]
