@@ -220,6 +220,8 @@ function removeLocationMarker(marker) {
 
 }
 
+let soundEffect = new Audio("sounds/blop.mp3");
+
 /**
  * Switches to a level
  */
@@ -292,7 +294,6 @@ GameController.defineMethod("selectLevel", function (level) {
       this.gameMap.setView([37.7754, -119.4179], 6);
 
       let multiplier = 0;
-      let soundEffect = new Audio("sounds/blop.mp3");
 
       for (let i = 0; i < locations.length; i++) {
         let marker = L.marker([locations[i].lat, locations[i].lon], {icon: GameController.locMarkerIcon});
