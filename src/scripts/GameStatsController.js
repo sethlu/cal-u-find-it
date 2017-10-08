@@ -61,8 +61,11 @@ GameStatsController.defineMethod("updateView", function () {
 
     element.classList.add("hidden"); // Hide the element
 
+    let location = levelStats.level.locations[0];
+
     template.querySelector(".level-prompt").innerText = levelStats.level.question;
-    template.querySelector(".level-location-name").innerText = levelStats.level.locations[0].location;
+    template.querySelector(".level-location-name").innerText = location.location;
+    template.querySelector(".level-location-image").style.backgroundImage = `url("${location.image}")`;
 
     levelStatsElement.appendChild(template);
 

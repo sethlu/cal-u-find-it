@@ -309,6 +309,13 @@ button {
     }
 
     .level-stats {
+      position: relative;
+      box-sizing: border-box;
+      padding: 1em 15em 1em 0;
+      background-blend-mode: normal;
+      background-size: cover;
+      background-position: center;
+
       transition: opacity ease 0.3s, transform ease 0.3s;
 
       &.hidden {
@@ -323,6 +330,16 @@ button {
 
       .level-location-name {
         margin-top: 0;
+      }
+
+      .level-location-image {
+        position: absolute;
+        top: 1em;
+        right: 0;
+        bottom: 1em;
+        width: 15em;
+        background-size: cover;
+        border-radius: 0.125em;
       }
 
       + .level-stats {
