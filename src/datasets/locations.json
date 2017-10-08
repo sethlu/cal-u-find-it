@@ -22,7 +22,7 @@
   {
     "question": [
       "Where is the number 1 public university in the world?",
-      "Where is the tallest tower located ?"
+      "Where is the tallest tower located?"
     ],
     "location": "UC Berkeley",
     "region": "Nor",
@@ -209,7 +209,8 @@
   },
   {
     "question": [
-      "Where is \"Muscle Beach\" located? Come visit me and you will see a lot of impressive street performers."
+      "Where is \"Muscle Beach\" located?",
+      "Come visit me and you will see a lot of impressive street performers."
     ],
     "location": "Venice Boardwalk",
     "region": "LA",
@@ -219,7 +220,7 @@
   },
   {
     "question": [
-      "During the spring time, I am filled with a lot of beautiful flowers"
+      "During the spring time, I am filled with a lot of beautiful flowers."
     ],
     "location": "Flower Fields at Carlsbad",
     "region": "SD",
@@ -240,7 +241,7 @@
   },
   {
     "question": [
-      "In addition to animals, I also have a Botanical Garden"
+      "In addition to animals, I also have a Botanical Garden."
     ],
     "location": "Los Angeles Zoo",
     "region": "LA",
@@ -270,7 +271,7 @@
   },
   {
     "question": [
-      "You can only go through my streets by twisting and turning down the hills"
+      "You can only go through my streets by twisting and turning down the hills."
     ],
     "location": "Lombard Street",
     "region": "Nor",
