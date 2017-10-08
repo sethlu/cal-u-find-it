@@ -30,6 +30,7 @@
       "I am the birthplace of the Free Speech Movement."
     ],
     "location": "UC Berkeley",
+    "wikiEntry": "University of California, Berkeley",
     "region": "Nor",
     "lat": 37.8719,
     "lon": -122.2585,
@@ -43,6 +44,7 @@
       "I try to compete with UC Berkeley."
     ],
     "location": "Stanford",
+    "wikiEntry": "Stanford University",
     "region": "Nor",
     "lat": 37.4275,
     "lon": -122.1697,
@@ -142,6 +144,7 @@
       "I used to house Al Capone."
     ],
     "location": "Alcatraz",
+    "wikiEntry": "Alcatraz Island",
     "region": "Nor",
     "lat": 37.8267,
     "lon": -122.423,
@@ -251,6 +254,7 @@
       "I am the second most visited place next to Disneyland in Southern California."
     ],
     "location": "Venice Boardwalk",
+    "entryWiki": "Muscle Beach",
     "region": "LA",
     "lat": 33.985,
     "lon": -118.4695,
