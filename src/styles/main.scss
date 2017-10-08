@@ -16,6 +16,7 @@ html {
   font-size: 18px;
   font-family: $font-sans-serif;
   font-weight: 400;
+  line-height: 1.5;
   overflow: hidden;
   user-select: none;
   cursor: default;
@@ -38,10 +39,14 @@ body {
 
 // Text
 
+h2 {
+  color: #444;
+}
+
 h3 {
   font-size: 2em;
   margin: 0.5em 0;
-  line-height: 1.2;
+  line-height: 1.5;
   font-family: $font-serif;
   color: $color-orange;
 }
@@ -70,6 +75,7 @@ button {
 // Views
 
 .view {
+  box-sizing: border-box;
   width: 100%;
   height: 100%;
   overflow-y: auto;
@@ -100,7 +106,6 @@ button {
         max-width: 100%;
         background: #fff;
         flex: 0 1 auto;
-        line-height: 1.2;
         text-align: center;
         border-radius: 0.5em;
         background: $color-light-blue;
@@ -191,6 +196,45 @@ button {
             bottom: 1em;
           }
         }
+      }
+    }
+  }
+
+  &.game-stats {
+    padding: 2em;
+
+    .container {
+      width: 55em;
+      max-width: 100%;
+    }
+
+    .levels-stats {
+      margin: 2em 0;
+    }
+
+    .level-stats {
+
+      .level-prompt {
+        margin: 1em 0 0;
+        color: #888;
+      }
+
+      .level-location-name {
+        margin-top: 0;
+      }
+
+      + .level-stats {
+        border-top: solid 1px #ddd;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      margin: 0 -0.5em -0.5em 0;
+
+      button {
+        flex: 0 0 auto;
+        margin: 0 0.5em 0.5em 0;
       }
     }
   }

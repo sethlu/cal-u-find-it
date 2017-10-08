@@ -50,7 +50,8 @@ GameStatsController.defineMethod("updateView", function () {
 
     let template = cloneTemplate("#template-game-level-stats");
 
-    template.querySelector(`[data-level-location="name"]`).innerText = levelStats.level.locations[0].location;
+    template.querySelector(".level-prompt").innerText = levelStats.level.question;
+    template.querySelector(".level-location-name").innerText = levelStats.level.locations[0].location;
 
     levelStatsElement.appendChild(template);
   });

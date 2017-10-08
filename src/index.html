@@ -11,7 +11,8 @@
     <div hidden>
       <template id="template-game-level-stats">
         <div class="level-stats">
-          <h3 data-level-location="name"></h3>
+          <div class="level-prompt"></div>
+          <h3 class="level-location-name"></h3>
         </div>
       </template>
     </div>
@@ -39,10 +40,14 @@
       </div>
     </div>
     <div class="view game-stats">
-      <h2>Stats</h2>
-      <div class="levels-stats"></div>
-      <button class="game-replay">Play again</button>
-      <button class="game-home">Home</button>
+      <div class="container">
+        <h2>Cal-U-Find-It</h2>
+        <div class="levels-stats"></div>
+        <div class="buttons">
+          <button class="game-replay">Play again</button>
+          <button class="game-home">Home</button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
