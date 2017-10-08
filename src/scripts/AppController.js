@@ -2,6 +2,7 @@
 import {Controller} from "./component/Controller";
 import {GameController} from "./GameController";
 import {GameStatsController} from "./GameStatsController";
+import {HomeController} from "./HomeController";
 
 let AppController = Controller.createComponent("AppController");
 
@@ -18,7 +19,7 @@ AppController.defineMethod("initView", function () {
   }, this);
 
   // Home view
-  this.homeController = new Controller(this.view.querySelector(".view.home"));
+  this.homeController = new HomeController(this.view.querySelector(".view.home"));
   this.homeController.componentOf = this;
 
   // Game view
