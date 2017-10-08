@@ -102,6 +102,8 @@ button {
         border-radius: 0.5em;
         color: $color-blue;
         box-shadow: 0 0 60px rgba(#888, 0.20);
+
+        transition: opacity ease 0.3s;
       }
     }
 

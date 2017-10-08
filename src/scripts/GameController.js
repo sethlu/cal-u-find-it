@@ -1,5 +1,6 @@
 
 import {Controller} from "./component/Controller";
+import {Waterfall} from "./component/Waterfall";
 import {Location} from "./Location";
 import {Level} from "./Level";
 import {GameStats} from "./GameStats";
@@ -24,10 +25,10 @@ GameController.generateLevelsAsync = function (numLevels = 5) {
         ]
       }));
       levels.push(new Level({
-        question: locations[2].question[0],
+        question: locations[1].question[0],
         locations: [
-          locations[2],
-          locations[3]
+          locations[1],
+          locations[2]
         ]
       }));
 
@@ -41,7 +42,7 @@ GameController.generateLevelsAsync = function (numLevels = 5) {
 GameController.defineMethod("init", function () {
 
   /** Current level of the game */
-  this.level = 0;
+  this.level = false;
 
   /** A list of levels */
   this.levels = [];
@@ -128,8 +129,13 @@ GameController.defineMethod("resetGame", function (resetLevels = false) {
   this.gameStats.resetStats();
 
   return promise.then(function () {
+
+    // Reset to no level selected for quick level selection
+    this.level = false;
+
     // Display the first level
     this.selectLevel(0);
+
   }.bind(this));
 
 });
@@ -152,49 +158,82 @@ GameController.defineMethod("selectLevel", function (level) {
 
   if (level >= this.levels.length) return false;
 
-  // Unset the graphics for the current level
+  let waterfall = new Waterfall();
 
-  for (let i = 0; i < this.locMarkers.length; i++) {
-    this.locMarkers[i].remove();
-  }
-  this.locMarkers = [];
+  waterfall = waterfall.then(function () {
 
-  // Switch to new level
-  this.level = level;
+    // Unset the graphics for the current level
+
+    for (let i = 0; i < this.locMarkers.length; i++) {
+      this.locMarkers[i].remove();
+    }
+    this.locMarkers = [];
+
+  }.bind(this));
+
+  if (this.level !== false) // No need to hide the prompt if not previously on a level
+    waterfall = waterfall.then(function () {
+
+      // Hide the prompt box
+      promptElement.classList.add("hidden");
+
+    }.bind(this), 300);
+
+  waterfall = waterfall.then(function () {
+
+    // Switch to new level
+    this.level = level;
+
+  }.bind(this));
 
   // Set the graphics for the new level
 
-  let {question, locations} = this.levels[this.level];
+  let promptElement = this.view.querySelector(`.prompt`);
 
-  this.view.querySelector(`[data-level="prompt"]`).innerText = question;
+  waterfall = waterfall
+    .then(function () {
 
-  this.gameMap.setView([36.7783, -119.4179], 6);
+      let {question, locations} = this.levels[this.level];
 
-  for (let i = 0; i < locations.length; i++) {
-    let marker = L.marker([locations[i].lat, locations[i].lon]);
-    this.locMarkers.push(marker);
-    marker.addTo(this.gameMap);
+      this.view.querySelector(`[data-level="prompt"]`).innerText = question;
 
-    marker.on("click", function () {
-      if (i === 0) {
+      this.gameMap.setView([36.7783, -119.4179], 6);
 
-        // Record level stats
-        this.gameStats.recordLevelStats(
-          this.level,
-          new LevelStats(this.levels[this.level], {
-            timeRemaining: 1 // 1 sec remaining from game
-          })
-        );
+      for (let i = 0; i < locations.length; i++) {
+        let marker = L.marker([locations[i].lat, locations[i].lon]);
+        this.locMarkers.push(marker);
+        marker.addTo(this.gameMap);
 
-        this.showLevelLocationSplash();
+        marker.on("click", function () {
+          if (i === 0) {
 
-      } else {
-        // TODO: Probably give time penalty
-        alert("Try the other one(s)");
+            // Record level stats
+            this.gameStats.recordLevelStats(
+              this.level,
+              new LevelStats(this.levels[this.level], {
+                timeRemaining: 1 // TODO: Seconds remaining from level
+              })
+            );
+
+            this.showLevelLocationSplash();
+
+          } else {
+
+            // TODO: Probably give time penalty
+            alert("Try the other one(s)");
+
+          }
+        }.bind(this));
+
       }
-    }.bind(this));
 
-  }
+    }.bind(this))
+    .then(function () {
+
+      // Show the prompt element
+      promptElement.classList.remove("hidden");
+
+    }, 300);
 
   return true; // Changed to the level selected
 
