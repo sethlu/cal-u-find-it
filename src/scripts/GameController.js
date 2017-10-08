@@ -270,8 +270,7 @@ GameController.defineMethod("selectLevel", function (level) {
 
             document.getElementById("health").classList.remove("play");
 
-            let levelEndTime = time;
-            let timeRemaining = Math.max(0, 15 - ((levelEndTime - levelStartTime) / 1000 + multiplier * 0.05 * 15));
+            let timeRemaining = Math.max(0, 15 - ((time - levelStartTime) / 1000 + multiplier * 0.1 * 15));
 
             // Record level stats
             this.gameStats.recordLevelStats(
@@ -291,7 +290,7 @@ GameController.defineMethod("selectLevel", function (level) {
             this.locMarkers[i].remove();
 
             multiplier++;
-            document.getElementById("health").style.marginLeft = (-5 * multiplier) + "%";
+            document.getElementById("health").style.marginLeft = (-10 * multiplier) + "%";
 
           }
 
