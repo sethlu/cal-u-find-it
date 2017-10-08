@@ -104,8 +104,8 @@ GameController.defineMethod("init", function () {
   if (!GameController.locMarkerIcon)
     GameController.locMarkerIcon = L.icon({
       iconUrl: "images/location-marker.png",
-      iconSize: [32, 32],
-      iconAnchor: [16, 16]
+      iconSize: [48, 48],
+      iconAnchor: [24, 24]
     });
 
 });
