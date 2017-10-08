@@ -144,6 +144,10 @@ GameController.defineMethod("initView", function () {
     zoomControl: false
   });
 
+  this.gameMap.touchZoom.disable();
+  this.gameMap.doubleClickZoom.disable();
+  this.gameMap.scrollWheelZoom.disable();
+
   L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
     attribution: "Map data &copy; 2017 OpenStreetMap contributors",
     minZoom: "6",
