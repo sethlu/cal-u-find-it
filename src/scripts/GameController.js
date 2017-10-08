@@ -281,6 +281,9 @@ GameController.defineMethod("selectLevel", function (level) {
               })
             );
 
+            clearInterval(autoMarkerRemovalInterval);
+            autoMarkerRemovalInterval = undefined;
+
             this.showLevelLocationSplash();
 
           } else {
