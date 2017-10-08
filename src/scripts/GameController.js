@@ -137,8 +137,8 @@ GameController.defineMethod("initView", function () {
 
   L.tileLayer("https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png", {
     attribution: "Map data &copy; 2017 OpenStreetMap contributors",
-    minZoom: "5",
-    maxZoom: "7"
+    minZoom: "6",
+    maxZoom: "6"
   })
     .addTo(this.gameMap);
 
@@ -242,7 +242,7 @@ GameController.defineMethod("selectLevel", function (level) {
 
       this.view.querySelector(`[data-level="prompt"]`).innerText = question;
 
-      this.gameMap.setView([36.7783, -119.4179], 6);
+      this.gameMap.setView([37.7754, -119.4179], 6);
 
       for (let i = 0; i < locations.length; i++) {
         let marker = L.marker([locations[i].lat, locations[i].lon]);
