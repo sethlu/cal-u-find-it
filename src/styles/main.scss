@@ -263,6 +263,7 @@ button {
 
         .level-location-info-container {
           overflow-y: scroll;
+          -webkit-overflow-scrolling: touch;
         }
 
         .level-location-info {
@@ -299,6 +300,7 @@ button {
   &.game-stats {
     padding: 2em 2em 3.5em 2em;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 
     .container {
       width: 40em;
