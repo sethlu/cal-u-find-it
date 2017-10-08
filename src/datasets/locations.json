@@ -104,6 +104,7 @@
       "We house the Twin Dragon Gateway."
     ],
     "location": "Chinatown (Los Angeles)",
+    "wikiEntry": "Chinatown, Los Angeles",
     "region": "LA",
     "lat": 34.0623,
     "lon": -118.2383,
@@ -164,6 +165,7 @@
       "I was always crowded when Pokemon Go first came out."
     ],
     "location": "Santa Monica Pier",
+    "wikiEntry": "Pacific Park",
     "region": "LA",
     "lat": 34.0114,
     "lon": -118.4949,
@@ -188,6 +190,7 @@
       "I have the famous Little Mermaid Statue."
     ],
     "location": "Solvang",
+    "wikiEntry": "Solvang, California",
     "region": "Central",
     "lat": 34.5958,
     "lon": -120.1376,
@@ -321,6 +324,7 @@
       "You can ride a cable cart to reach the top of my street."
     ],
     "location": "Lombard Street",
+    "wikiEntry": "Lombard Street (San Francisco)",
     "region": "Nor",
     "lat": 37.773972,
     "lon": -122.431297,
