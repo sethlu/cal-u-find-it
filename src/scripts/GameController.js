@@ -404,7 +404,7 @@ GameController.defineMethod("showLevelLocationSplash", function () {
     `${Math.abs(location.lat)}° ${location.lat >= 0 ? "N" : "S"}, ${Math.abs(location.lon)}° ${location.lon >= 0 ? "E" : "W"}`;
 
   splashElement.querySelector(".level-location-wikipedia .summary").innerText = "";
-  getJSONAsync(`https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&prop=extracts&exintro=&explaintext=&titles=${encodeURIComponent(location.wikiEntry ? location.wikiEntry : location.location)}`)
+  getJSONAsync(`https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&prop=extracts&explaintext=1&titles=${encodeURIComponent(location.wikiEntry ? location.wikiEntry : location.location)}`)
     .then(function (json) {
 
       let summary = "";
