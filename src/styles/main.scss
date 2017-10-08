@@ -40,6 +40,8 @@ body {
 // Text
 
 h2 {
+  font-size: 1.2em;
+  margin: 1.25em 0;
   color: #444;
 }
 
@@ -201,7 +203,7 @@ button {
   }
 
   &.game-stats {
-    padding: 2em;
+    padding: 2em 2em 3.5em 2em;
 
     .container {
       width: 55em;
