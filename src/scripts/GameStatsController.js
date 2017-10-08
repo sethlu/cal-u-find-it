@@ -46,6 +46,11 @@ GameStatsController.defineMethod("updateView", function () {
   let levelStatsElement = this.view.querySelector(".levels-stats");
   clearChildNodes(levelStatsElement);
 
+  let levelStatsButtonsElement = this.view.querySelector(".buttons");
+  levelStatsButtonsElement.hidden = true;
+  levelStatsButtonsElement.classList.add("hidden");
+  levelStatsButtonsElement.hidden = false;
+
   let waterfall = new Waterfall();
 
   if (this.gameStats) Object.entries(this.gameStats.levels).forEach(function (entry) {
@@ -67,6 +72,11 @@ GameStatsController.defineMethod("updateView", function () {
       }, 80);
 
   });
+
+  waterfall = waterfall
+    .then(function () {
+      levelStatsButtonsElement.classList.remove("hidden");
+    })
 
 });
 
