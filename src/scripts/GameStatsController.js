@@ -53,8 +53,11 @@ GameStatsController.defineMethod("updateView", function () {
 
   let waterfall = new Waterfall();
 
-  if (this.gameStats) Object.entries(this.gameStats.levels).forEach(function (entry) {
-    let [index, levelStats] = entry;
+  let totalPoints = 0;
+
+  if (this.gameStats) for (let levelStats of this.gameStats.levels) {
+
+    totalPoints += levelStats.stats.points;
 
     let template = cloneTemplate("#template-game-level-stats");
     let element = template.querySelector(".level-stats");
@@ -74,7 +77,9 @@ GameStatsController.defineMethod("updateView", function () {
         element.classList.remove("hidden"); // Show the element
       }, 80);
 
-  });
+  }
+
+  this.view.querySelector(".game-score").innerText = totalPoints;
 
   waterfall = waterfall
     .then(function () {

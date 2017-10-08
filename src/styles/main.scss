@@ -304,6 +304,15 @@ button {
       margin: 0 auto;
     }
 
+    .game-status {
+      font-size: 1.4em;
+      color: #888;
+
+      .game-score {
+        font-weight: 700;
+      }
+    }
+
     .levels-stats {
       margin: 2em 0;
     }
