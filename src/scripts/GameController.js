@@ -257,6 +257,7 @@ GameController.defineMethod("selectLevel", function (level) {
       this.gameMap.setView([37.7754, -119.4179], 6);
 
       let multiplier = 0;
+      let soundEffect = new Audio("sounds/blop.mp3");
 
       for (let i = 0; i < locations.length; i++) {
         let marker = L.marker([locations[i].lat, locations[i].lon], {icon: GameController.locMarkerIcon});
@@ -271,6 +272,7 @@ GameController.defineMethod("selectLevel", function (level) {
             document.getElementById("health").classList.remove("play");
 
             let timeRemaining = Math.max(0, 15 - ((time - levelStartTime) / 1000 + multiplier * 0.1 * 15));
+            soundEffect.play();
 
             // Record level stats
             this.gameStats.recordLevelStats(
@@ -291,6 +293,7 @@ GameController.defineMethod("selectLevel", function (level) {
 
             multiplier++;
             document.getElementById("health").style.marginLeft = (-10 * multiplier) + "%";
+            soundEffect.play();
 
           }
 
