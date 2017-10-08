@@ -11,27 +11,72 @@ let GameController = Controller.createComponent("GameController");
 /**
  * Generates a list of levels
  */
+function randomGenerator(listLocations) {
+  let i, curr, top = listLocations.length;
+  if (top) while(--top) {
+    curr = Math.floor(Math.random() * (top + 1));
+    i = listLocations[curr];
+    listLocations[curr] = listLocations[top];
+    listLocations[top] = i;
+  }
+  return listLocations;
+
+}
+
+function distanceFormula(correctLoc, compLoc) {
+  let changeInX = correctLoc.lat - compLoc.lat;
+  let changeInY = correctLoc.lon - compLoc.lon;
+  return Math.sqrt((changeInX * changeInX) + (changeInY * changeInY));
+}
+
 GameController.generateLevelsAsync = function (numLevels = 5) {
   return Location.getLocationsAsync()
     .then(function (locations) {
+      let mixedLocation = randomGenerator(locations);
       let levels = [];
 
-      // TODO: Actually generate levels
-      levels.push(new Level({
-        question: locations[0].question[0],
-        locations: [
-          locations[0],
-          locations[1]
-        ]
-      }));
-      levels.push(new Level({
-        question: locations[1].question[0],
-        locations: [
-          locations[1],
-          locations[2]
-        ]
-      }));
+      // TODO: If successful in making multiple questions for each location, random number generator needs to be created.
 
+      for (let i = 0; i < numLevels; i++) {
+        levels.push(new Level({
+          question: mixedLocation[i].question[0],
+          locations: [
+            mixedLocation[i]
+          ]
+        }));
+      }
+      for (let j = 0; j < levels.length; j++) {
+        let tempList = randomGenerator(locations);
+        for (let k = 0; k < tempList.length; k++) {
+          if (levels[j].locations[0] !== tempList[k]) {
+
+            let distance = distanceFormula(levels[j].locations[0], tempList[k]);
+            if (distance < 1 || distance > 8) {
+              continue;
+            }
+
+            let everythingWorks = true;
+
+            for (let l = 1; l < levels[j].locations.length; l++) {
+              let distance = distanceFormula(levels[j].locations[l], tempList[k]);
+              if (distance < 1) {
+                everythingWorks = false;
+                break;
+              }
+            }
+
+            if (everythingWorks === false) {
+              continue;
+            }
+
+            levels[j].locations.push(tempList[k]);
+            if (levels[j].locations.length >= 5) {
+              break;
+            }
+
+          }
+        }
+      }
       return levels;
     });
 };
