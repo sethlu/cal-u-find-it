@@ -71,7 +71,7 @@
     "region": "Central",
     "lat": 36.5323,
     "lon": -116.9325,
-    "image": ""
+    "image": "images/locations/death-valley.jpg"
   },
   {
     "question": [
@@ -82,7 +82,7 @@
     "region": "Nor",
     "lat": 37.7941,
     "lon": -122.4078,
-    "image": ""
+    "image": "images/locations/chinatown-sf.jpg"
   },
   {
     "question": [
@@ -92,7 +92,7 @@
     "region": "LA",
     "lat": 34.0623,
     "lon": -118.2383,
-    "image": ""
+    "image": "images/locations/chinatown-la.jpg"
   },
   {
     "question": [
@@ -102,7 +102,7 @@
     "region": "Central",
     "lat": 35.6852,
     "lon": -121.1682,
-    "image": ""
+    "image": "images/locations/hearst-castle.jpg"
   },
   {
     "question": [
@@ -113,7 +113,7 @@
     "region": "Nor",
     "lat": 37.808,
     "lon": -122.4177,
-    "image": ""
+    "image": "images/locations/fishermans-wharf.jpg"
   },
   {
     "question": [
@@ -123,7 +123,7 @@
     "region": "Nor",
     "lat": 37.8267,
     "lon": -122.423,
-    "image": ""
+    "image": "images/locations/alcatraz.jpg"
   },
   {
     "question": [
@@ -133,7 +133,7 @@
     "region": "Nor",
     "lat": 36.9643,
     "lon": -122.0189,
-    "image": ""
+    "image": "images/locations/santa-cruz.jpg"
   },
   {
     "question": [
@@ -143,7 +143,7 @@
     "region": "LA",
     "lat": 34.0114,
     "lon": -118.4949,
-    "image": ""
+    "image": "images/locations/santa-monica.jpg"
   },
   {
     "question": [
@@ -153,7 +153,7 @@
     "region": "SD",
     "lat": 32.7137,
     "lon": -117.1751,
-    "image": ""
+    "image": "images/locations/uss-midway.jpg"
   },
   {
     "question": [
@@ -163,7 +163,7 @@
     "region": "Central",
     "lat": 34.5958,
     "lon": -120.1376,
-    "image": ""
+    "image": "images/locations/solvang.jpg"
   },
   {
     "question": [
@@ -174,7 +174,7 @@
     "region": "SD",
     "lat": 33.8734,
     "lon": -115.901,
-    "image": ""
+    "image": "images/locations/joshua-tree.jpg"
   },
   {
     "question": [
@@ -184,7 +184,7 @@
     "region": "LA",
     "lat": 34.2439,
     "lon": -116.9114,
-    "image": ""
+    "image": "images/locations/big-bear-lake.jpg"
   },
   {
     "question": [
@@ -194,7 +194,7 @@
     "region": "Nor",
     "lat": 39.0968,
     "lon": -120.0324,
-    "image": ""
+    "image": "images/locations/lake-tahoe.jpg"
   },
   {
     "question": [
@@ -205,7 +205,7 @@
     "region": "Nor",
     "lat": 41.2132,
     "lon": -124.0046,
-    "image": ""
+    "image": "images/locations/redwood.jpg"
   },
   {
     "question": [
@@ -216,7 +216,7 @@
     "region": "LA",
     "lat": 33.985,
     "lon": -118.4695,
-    "image": ""
+    "image": "images/locations/venice-beach.jpg"
   },
   {
     "question": [
@@ -226,7 +226,7 @@
     "region": "SD",
     "lat": 33.123,
     "lon": -117.3176,
-    "image": ""
+    "image": "images/locations/flower-field-carlsbad.jpg"
   },
   {
     "question": [
@@ -237,7 +237,7 @@
     "region": "SD",
     "lat": 32.7542,
     "lon": -117.197,
-    "image": ""
+    "image": "images/locations/old-town-sd.jpg"
   },
   {
     "question": [
@@ -247,7 +247,7 @@
     "region": "LA",
     "lat": 34.1486,
     "lon": -118.284,
-    "image": ""
+    "image": "images/locations/la-zoo.jpg"
   },
   {
     "question": [
@@ -257,17 +257,17 @@
     "region": "SD",
     "lat": 32.7353,
     "lon": -117.149,
-    "image": ""
+    "image": "images/locations/san-diego-zoo.jpg"
   },
   {
     "question": [
       "Where can you go to see varieties of sea creatures?"
     ],
-    "location": "Montery Bay Aquarium",
+    "location": "Monterey Bay Aquarium",
     "region": "Nor",
     "lat": 36.6183,
     "lon": -121.9018,
-    "image": ""
+    "image": "images/locations/monterey-bay.jpg"
   },
   {
     "question": [
@@ -277,6 +277,6 @@
     "region": "Nor",
     "lat": 37.773972,
     "lon": -122.431297,
-    "image": ""
+    "image": "images/locations/lombard-street.jpg"
   }
 ]
