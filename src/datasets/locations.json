@@ -1,7 +1,9 @@
 [
   {
     "question": [
-      "Where is one of the longest suspension bridge?"
+      "Where is one of the longest suspension bridge?",
+      "I was named after Golden Gate Strait",
+      "I am located at the entrance of the Bay through the Pacific Ocean."
     ],
     "location": "Golden Gate Bridge",
     "region": "Nor",
@@ -11,7 +13,9 @@
   },
   {
     "question": [
-      "When you visit me, you know will know where you are at by just looking towards the hills."
+      "When you visit me, you will know where you are at by just looking towards the hills.",
+      "When you think about movies, what do place do you usually associate it with?",
+      "Before my name was change, I use to have a Land at the end of my name."
     ],
     "location": "Hollywood Sign",
     "region": "LA",
@@ -22,7 +26,8 @@
   {
     "question": [
       "Where is the number 1 public university in the world?",
-      "Where is the tallest tower located?"
+      "Where is the tallest tower located?",
+      "I am the birthplace of the Free Speech Movement."
     ],
     "location": "UC Berkeley",
     "region": "Nor",
@@ -33,7 +38,9 @@
   },
   {
     "question": [
-      "What school has a tree for a mascot?"
+      "What school has a tree for a mascot?",
+      "Where is the Hoover Tower",
+      "I try to compete with UC Berkeley."
     ],
     "location": "Stanford",
     "region": "Nor",
@@ -43,7 +50,9 @@
   },
   {
     "question": [
-      "Where is the \"Happiest Place on Earth\"?"
+      "Where is the \"Happiest Place on Earth\"?",
+      "Come and visit me and hangout with your favorite childhood characters.",
+      "Fireworks show here is always the best."
     ],
     "location": "Disneyland ",
     "region": "LA",
@@ -53,7 +62,9 @@
   },
   {
     "question": [
-      "Where is El Capitan located?"
+      "Where is El Capitan located?",
+      "I house the tallest waterfall.",
+      "I was first discovered by Native Americans."
     ],
     "location": "Yosemite National Park",
     "region": "Nor",
@@ -65,7 +76,8 @@
   {
     "question": [
       "Where are the ghost towns located?",
-      "You will need a lot water with when you visit me to keep yourself hydrated."
+      "You will need a lot water with when you visit me to keep yourself hydrated.",
+      "If you cannot handle the heat, don't come."
     ],
     "location": "Death Valley National Park",
     "region": "Central",
@@ -76,7 +88,8 @@
   {
     "question": [
       "Where is the oldest Chinatown in North America?",
-      "I am the place where most Chinese immigrants went to during the Chinese Migration."
+      "I am the place where most Chinese immigrants went to during the Chinese Migration.",
+      "Chinese Immigrants came here during the Gold Rush."
     ],
     "location": "Chinatown (San Francisco)",
     "region": "Nor",
@@ -86,7 +99,9 @@
   },
   {
     "question": [
-      "Come visit me if you want to taste some good Chinese cuisine."
+      "Come visit me if you want to taste some good Chinese cuisine.",
+      "Rush Hour was filmed in one of the restaurants here.",
+      "We house the Twin Dragon Gateway."
     ],
     "location": "Chinatown (Los Angeles)",
     "region": "LA",
@@ -96,7 +111,9 @@
   },
   {
     "question": [
-      "Central California barely has any famous places, but this castle stands out the most."
+      "Central California barely has any famous places, but this castle stands out the most.",
+      "People also address me as La Casa Grande.",
+      "Come and visit me to see my Neptune Pool."
     ],
     "location": "Hearst Castle",
     "region": "Central",
@@ -107,9 +124,11 @@
   {
     "question": [
       "Where can you take a cable cart to buy clam chowder soup?",
-      "If you come and visit, you will see a colony of sea lions."
+      "If you come and visit, you will see a colony of sea lions.",
+      "Buy your Bay Area souvenirs here."
     ],
     "location": "Fisherman's Wharf",
+    "wikiEntry": "Fisherman's Wharf, San Francisco",
     "region": "Nor",
     "lat": 37.808,
     "lon": -122.4177,
@@ -117,7 +136,9 @@
   },
   {
     "question": [
-      "I use to keep all of the most infamous criminals that ever lived."
+      "I use to keep all of the most infamous criminals that ever lived.",
+      "Cold water that surrounds me prevents people from escaping.",
+      "I used to house Al Capone."
     ],
     "location": "Alcatraz",
     "region": "Nor",
@@ -127,7 +148,8 @@
   },
   {
     "question": [
-      "Where can you experience both the beach and a theme park at the same time?"
+      "Where can you experience both the beach and a theme park at the same time?",
+      "Come visit me to ride 46 rides and play 26 midway games."
     ],
     "location": "Santa Cruz Beach Boardwalk",
     "region": "Nor",
@@ -137,7 +159,9 @@
   },
   {
     "question": [
-      "Where is the end of Route 66 located?"
+      "Where is the end of Route 66 located?",
+      "People visit my Pacific Park.",
+      "I was always crowded when Pokemon Go first came out."
     ],
     "location": "Santa Monica Pier",
     "region": "LA",
@@ -147,7 +171,9 @@
   },
   {
     "question": [
-      "Where is one of U.S. longest-serving aircraft carrier located?"
+      "Where is one of U.S. longest-serving aircraft carrier located?",
+      "I was named after one of the most important battles in World War II",
+      "Where is the famous World War II kissing statue located."
     ],
     "location": "USS Midway Museum",
     "region": "SD",
@@ -157,7 +183,9 @@
   },
   {
     "question": [
-      "Where can you go to see what Denmark looks like?"
+      "Where can you go to see what Denmark looks like?",
+      "Where can you go to see a lot of wooden windmills?",
+      "I have the famous Little Mermaid Statue."
     ],
     "location": "Solvang",
     "region": "Central",
@@ -168,7 +196,8 @@
   {
     "question": [
       "I am very close to where Coachella is held.",
-      "I am a bit higher than the Mojave Desert, but lower than the Colorado Desert"
+      "I am a bit higher than the Mojave Desert, but lower than the Colorado Desert",
+      "I have the Quail Tree in my area."
     ],
     "location": "Joshua Tree National Park",
     "region": "SD",
@@ -178,7 +207,9 @@
   },
   {
     "question": [
-      "Where do people from Los Angeles go to experience snow?"
+      "Where do people from Los Angeles go to experience snow?",
+      "I am usually busy during the winter.",
+      "The lake here is man made."
     ],
     "location": "Big Bear Lake",
     "region": "LA",
@@ -188,7 +219,9 @@
   },
   {
     "question": [
-      "Where do people from Northern California go to experience snow?"
+      "Where do people from Northern California go to experience snow?",
+      "The water in my lake is fresh water.",
+      "My lake is the tenth deepest in the U.S."
     ],
     "location": "Lake Tahoe",
     "region": "Nor",
@@ -199,7 +232,8 @@
   {
     "question": [
       "Where are the tallest trees in California located?",
-      "I preserve indigenous faunas and floras."
+      "I preserve indigenous faunas and floras.",
+      "The Endor scene in Return of the Jedi was filmed here."
     ],
     "location": "Redwood National and State Park",
     "region": "Nor",
@@ -210,7 +244,8 @@
   {
     "question": [
       "Where is \"Muscle Beach\" located?",
-      "Come visit me and you will see a lot of impressive street performers."
+      "Come visit me and you will see a lot of impressive street performers.",
+      "I am the second most visited place next to Disneyland in Southern California."
     ],
     "location": "Venice Boardwalk",
     "region": "LA",
@@ -220,9 +255,12 @@
   },
   {
     "question": [
-      "During the spring time, I am filled with a lot of beautiful flowers."
+      "During the spring time, I am filled with a lot of beautiful flowers.",
+      "It takes as early as September to prepare.",
+      "There 700 million flowers here."
     ],
     "location": "Flower Fields at Carlsbad",
+    "wikiEntry": "The Flower Fields",
     "region": "SD",
     "lat": 33.123,
     "lon": -117.3176,
@@ -231,7 +269,8 @@
   {
     "question": [
       "Where is the first European settlement in western United States?",
-      "I am filled with delicious Mexican food."
+      "I am filled with delicious Mexican food.",
+      "You cannot swim in my lake because it is very near the shoreline."
     ],
     "location": "Old Town San Diego State Historic Park",
     "region": "SD",
@@ -241,7 +280,9 @@
   },
   {
     "question": [
-      "In addition to animals, I also have a Botanical Garden."
+      "In addition to animals, I also have a Botanical Garden.",
+      "I host the Zoo Lights during winter time.",
+      "One of my main exhibit is the Rainforest of Americas."
     ],
     "location": "Los Angeles Zoo",
     "region": "LA",
@@ -251,7 +292,9 @@
   },
   {
     "question": [
-      "I have more animals than any other zoo in California."
+      "I have more animals than any other zoo in California.",
+      "I am one of the oldest wildlife conversation centers.",
+      "I house around 4000 animals from 800 species."
     ],
     "location": "San Diego Zoo",
     "region": "SD",
@@ -261,7 +304,9 @@
   },
   {
     "question": [
-      "Where can you go to see varieties of sea creatures?"
+      "Where can you go to see varieties of sea creatures?",
+      "I am the aquarium that was seen in Finding Dory.",
+      "The largest tank here is used for the Open Sea Exhbit."
     ],
     "location": "Monterey Bay Aquarium",
     "region": "Nor",
@@ -271,12 +316,38 @@
   },
   {
     "question": [
-      "You can only go through my streets by twisting and turning down the hills."
+      "You can only go through my streets by twisting and turning down the hills.",
+      "You can only go through my street 5mph.",
+      "You can ride a cable cart to reach the top of my street."
     ],
     "location": "Lombard Street",
     "region": "Nor",
     "lat": 37.773972,
     "lon": -122.431297,
     "image": "images/locations/lombard-street.jpg"
+  },
+  {
+    "question": [
+      "A lot of wine is produced here",
+      "There are a lot of grape vineyards here.",
+      "It is one of the smallest wine making county in the world."
+    ],
+    "location": "Napa Valley",
+    "region": "Nor",
+    "lat": 38.5025,
+    "lon": -122.2654,
+    "image": "images/locations/napa-valley.jpg"
+  },
+  {
+    "question": [
+      "I was named after John Muir",
+      "The tallest Redwood tree I have is only 258 ft tall.",
+      "Theodore Roosevelt created me as a national monument."
+    ],
+    "location": "Muir Woods",
+    "region": "Nor",
+    "lat": 37.8970,
+    "lon": -122.5811,
+    "image": "images/locations/muir-woods.jpg"
   }
 ]
