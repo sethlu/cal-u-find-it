@@ -125,7 +125,7 @@ button {
         background: white;
         border-radius: 0.5em;
         overflow: hidden;
-        box-shadow: 0 0 60px rgba(#888, 0.40);
+        box-shadow: 0 0 60px rgba(#888, 0.30);
         pointer-events: auto;
 
         h1 {
@@ -172,7 +172,7 @@ button {
         background: $color-light-blue;
         font-weight: 700;
         color: #fff;
-        box-shadow: 0 0 60px rgba(#888, 0.20);
+        box-shadow: 0 0 60px rgba(#888, 0.30);
 
         transition: opacity ease 0.3s;
       }
@@ -238,7 +238,7 @@ button {
         background: white;
         border-radius: 0.5em;
         overflow: hidden;
-        box-shadow: 0 0 60px rgba(#888, 0.20);
+        box-shadow: 0 0 60px rgba(#888, 0.30);
 
         transition: transform ease 0.35s, opacity ease 0.35s;
 
