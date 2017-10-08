@@ -123,6 +123,22 @@ button {
       justify-content: center;
       align-items: center;
 
+      &.hidden {
+        opacity: 1 !important;
+
+        > .card {
+          opacity: 0;
+          perspective: 2000px;
+          transform-origin: center;
+          transform: translate3d(0, 0, -2000px) rotateY(1deg) translate3d(0, 0, 2000px);
+        }
+      }
+      &.hidden.out {
+        > .card {
+          transform: translate3d(0, 0, -2000px) rotateY(-1deg) translate3d(0, 0, 2000px);
+        }
+      }
+
       > .card {
         flex: 0 0 auto;
         display: flex;
@@ -134,6 +150,8 @@ button {
         border-radius: 0.5em;
         overflow: hidden;
         box-shadow: 0 0 60px rgba(#888, 0.20);
+
+        transition: transform ease 0.35s, opacity ease 0.35s;
 
         > * {
           width: 50%;

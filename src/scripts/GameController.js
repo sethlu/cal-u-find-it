@@ -208,7 +208,8 @@ GameController.defineMethod("showLevelLocationSplash", function () {
 
   let splashElement = this.view.querySelector(".level-location-splash");
 
-  splashElement.classList.remove("hidden");
+  splashElement.classList.add("hidden"); // Set transparent
+  splashElement.classList.remove("out"); // Reset entering position
   splashElement.hidden = false;
 
   let location = this.levels[this.level].locations[0];
@@ -217,6 +218,10 @@ GameController.defineMethod("showLevelLocationSplash", function () {
   splashElement.querySelector(".level-location-name").innerText = location.location;
   splashElement.querySelector(".level-location-coords").innerText =
     `${Math.abs(location.lat)}° ${location.lat >= 0 ? "N" : "S"}, ${Math.abs(location.lon)}° ${location.lon >= 0 ? "E" : "W"}`;
+
+  setTimeout(function () {
+    splashElement.classList.remove("hidden");
+  }, 1);
 
 });
 
@@ -227,8 +232,11 @@ GameController.defineMethod("hideLevelLocationSplash", function () {
 
   let splashElement = this.view.querySelector(".level-location-splash");
 
-  splashElement.classList.add("hidden");
-  splashElement.hidden = true;
+  splashElement.classList.add("hidden", "out"); // Use exiting position
+
+  setTimeout(function () {
+    splashElement.hidden = true;
+  }, 350);
 
 });
 
