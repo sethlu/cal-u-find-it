@@ -398,11 +398,18 @@ GameController.defineMethod("showLevelLocationSplash", function () {
   splashElement.querySelector(".level-location-coords").innerText =
     `${Math.abs(location.lat)}° ${location.lat >= 0 ? "N" : "S"}, ${Math.abs(location.lon)}° ${location.lon >= 0 ? "E" : "W"}`;
 
+  splashElement.querySelector(".level-location-wikipedia .summary").innerText = "";
   getJSONAsync(`https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&prop=extracts&exintro=&explaintext=&titles=${encodeURIComponent(location.location)}`)
     .then(function (json) {
-      let pages = Object.values(json.query.pages);
-      if (pages.length > 0 && pages[0].extract)
-        splashElement.querySelector(".level-location-wikipedia .summary").innerText = pages[0].extract.substr(0, pages[0].extract.indexOf("\n"));
+
+      let summary = "";
+      for (let index in json.query.pages) {
+        let page = json.query.pages[index];
+        if (page.extract) summary = page.extract.substr(0, page.extract.indexOf("\n"));
+      }
+
+      splashElement.querySelector(".level-location-wikipedia .summary").innerText = summary;
+
     });
 
   setTimeout(function () {
