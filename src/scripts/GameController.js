@@ -321,7 +321,7 @@ GameController.defineMethod("showLevelLocationSplash", function () {
 
   setTimeout(function () {
     splashElement.classList.remove("hidden");
-  }, 1);
+  }, 10);
 
 });
 
