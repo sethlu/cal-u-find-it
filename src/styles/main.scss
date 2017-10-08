@@ -90,6 +90,7 @@ button {
 // Views
 
 .view {
+  position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -97,7 +98,6 @@ button {
 
   // Home
   &.home {
-    overflow-y: auto;
 
     > .map {
       width: 100%;
@@ -146,9 +146,6 @@ button {
 
   // Game
   &.game {
-    position: relative;
-
-    background: #eee;
 
     > .status-bar {
       position: absolute;
