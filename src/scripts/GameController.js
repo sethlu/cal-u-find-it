@@ -235,6 +235,8 @@ GameController.defineMethod("selectLevel", function (level) {
 
   let promptElement = this.view.querySelector(`.prompt`);
 
+  let levelStartTime;
+
   waterfall = waterfall
     .then(function () {
 
@@ -244,6 +246,8 @@ GameController.defineMethod("selectLevel", function (level) {
 
       this.gameMap.setView([37.7754, -119.4179], 6);
 
+      let multiplier = 0;
+
       for (let i = 0; i < locations.length; i++) {
         let marker = L.marker([locations[i].lat, locations[i].lon]);
         this.locMarkers.push(marker);
@@ -252,11 +256,16 @@ GameController.defineMethod("selectLevel", function (level) {
         marker.on("click", function () {
           if (i === 0) {
 
+            document.getElementById("health").classList.remove("play");
+
+            let levelEndTime = new Date();
+            let timeRemaining = Math.max(0, 15 - ((levelEndTime - levelStartTime) / 1000 + multiplier * 0.05 * 15));
+
             // Record level stats
             this.gameStats.recordLevelStats(
               this.level,
               new LevelStats(this.levels[this.level], {
-                timeRemaining: 1 // TODO: Seconds remaining from level
+                points: Number.parseInt(timeRemaining)
               })
             );
 
@@ -264,8 +273,10 @@ GameController.defineMethod("selectLevel", function (level) {
 
           } else {
 
-            // TODO: Probably give time penalty
-            alert("Try the other one(s)");
+            this.locMarkers[i].remove();
+
+            multiplier++;
+            document.getElementById("health").style.marginLeft = (-5 * multiplier) + "%";
 
           }
         }.bind(this));
@@ -277,6 +288,11 @@ GameController.defineMethod("selectLevel", function (level) {
 
       // Show the prompt element
       promptElement.classList.remove("hidden");
+
+      document.getElementById("health").classList.add("play");
+      document.getElementById("health").style.marginLeft = 0;
+
+      levelStartTime = new Date();
 
     }, 300);
 

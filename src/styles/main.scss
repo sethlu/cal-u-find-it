@@ -178,6 +178,22 @@ button {
       }
     }
 
+    #health {
+      height: 16px;
+      background: $color-light-blue;
+      position: fixed;
+      bottom: 0;
+      transition: margin-left .5s;
+
+      &.play {
+        animation-name: slide-in;
+        animation-iteration-count: 1;
+        animation-duration: 15s;
+        animation-direction: normal;
+        animation-timing-function: linear;
+      }
+    }
+
     > .map {
       width: 100%;
       height: 100%;
@@ -305,5 +321,15 @@ button {
         margin: 0 0.5em 0.5em 0;
       }
     }
+  }
+}
+
+@keyframes slide-in {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
   }
 }
