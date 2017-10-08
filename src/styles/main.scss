@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css?family=Mukta|Playfair+Display:700");
+@import url("https://fonts.googleapis.com/css?family=Mukta:400,700|Playfair+Display:700");
 
 $color-orange: #fa8525;
 $color-light-orange: #f7ba2a;
@@ -15,6 +15,7 @@ html {
   height: 100%;
   font-size: 18px;
   font-family: $font-sans-serif;
+  font-weight: 400;
   overflow: hidden;
   user-select: none;
   cursor: default;
@@ -95,12 +96,16 @@ button {
         display: block;
         font-size: 1em;
         padding: 0.5em 1em;
+        margin: 0 1em;
+        max-width: 100%;
         background: #fff;
-        flex: 0 0 auto;
-        line-height: 1;
+        flex: 0 1 auto;
+        line-height: 1.2;
         text-align: center;
         border-radius: 0.5em;
-        color: $color-blue;
+        background: $color-light-blue;
+        font-weight: 700;
+        color: #fff;
         box-shadow: 0 0 60px rgba(#888, 0.20);
 
         transition: opacity ease 0.3s;
@@ -119,7 +124,7 @@ button {
       right: 0;
       bottom: 0;
       left: 0;
-      padding: 4em 2em;
+      padding: 6em 2em;
       z-index: 2;
       display: flex;
       justify-content: center;
