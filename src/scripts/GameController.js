@@ -5,6 +5,7 @@ import {Location} from "./Location";
 import {Level} from "./Level";
 import {GameStats} from "./GameStats";
 import {LevelStats} from "./LevelStats";
+import {getJSONAsync} from "./util";
 
 let GameController = Controller.createComponent("GameController");
 
@@ -203,6 +204,22 @@ GameController.defineMethod("nextLevel", function () {
 
 });
 
+function removeLocationMarker(marker) {
+
+  let waterfall = new Waterfall();
+
+  if (marker._icon) waterfall = waterfall
+    .then(function () {
+      marker._icon.classList.add("hidden");
+    }, 250);
+
+  waterfall = waterfall
+    .then(function () {
+      marker.remove();
+    });
+
+}
+
 /**
  * Switches to a level
  */
@@ -212,28 +229,46 @@ GameController.defineMethod("selectLevel", function (level) {
 
   let waterfall = new Waterfall();
 
+  // Unset the graphics for the current level
+
+  if (this.level === false) {
+
+    waterfall = waterfall
+      .then(function () {
+
+        for (let i = 0; i < this.locMarkers.length; i++) {
+          this.locMarkers[i].remove();
+        }
+        this.locMarkers = [];
+
+      }.bind(this));
+
+  } else {
+
+    // No need to hide the prompt if not previously on a level
+
+    waterfall = waterfall
+      .then(function () {
+
+        for (let i = 0; i < this.locMarkers.length; i++) {
+          removeLocationMarker(this.locMarkers[i]);
+        }
+        this.locMarkers = [];
+
+      }.bind(this))
+      .then(function () {
+
+        // Hide the prompt box
+        promptElement.classList.add("hidden");
+
+      }.bind(this), 300);
+
+  }
+
+  // Switch to new level
+
   waterfall = waterfall.then(function () {
 
-    // Unset the graphics for the current level
-
-    for (let i = 0; i < this.locMarkers.length; i++) {
-      this.locMarkers[i].remove();
-    }
-    this.locMarkers = [];
-
-  }.bind(this));
-
-  if (this.level !== false) // No need to hide the prompt if not previously on a level
-    waterfall = waterfall.then(function () {
-
-      // Hide the prompt box
-      promptElement.classList.add("hidden");
-
-    }.bind(this), 300);
-
-  waterfall = waterfall.then(function () {
-
-    // Switch to new level
     this.level = level;
 
   }.bind(this));
@@ -264,6 +299,10 @@ GameController.defineMethod("selectLevel", function (level) {
         this.locMarkers.push(marker);
         marker.addTo(this.gameMap);
 
+        marker._icon.hidden = true;
+        marker._icon.classList.add("hidden");
+        marker._icon.hidden = false;
+
         marker.on("click", function () {
           let time = new Date();
 
@@ -289,7 +328,7 @@ GameController.defineMethod("selectLevel", function (level) {
 
           } else {
 
-            this.locMarkers[i].remove();
+            removeLocationMarker(this.locMarkers[i]);
 
             multiplier++;
             document.getElementById("health").style.marginLeft = (-10 * multiplier) + "%";
@@ -300,6 +339,10 @@ GameController.defineMethod("selectLevel", function (level) {
           lastInteractionTime = time;
 
         }.bind(this));
+
+        setTimeout(function () {
+          marker._icon.classList.remove("hidden");
+        }, 10);
 
       }
 
@@ -321,7 +364,7 @@ GameController.defineMethod("selectLevel", function (level) {
         if (time - lastInteractionTime > 4000) {
           for (let i = this.locMarkers.length - 1; i > 0; i--) {
             if (this.locMarkers[i]._icon) {
-              this.locMarkers[i].remove();
+              removeLocationMarker(this.locMarkers[i]);
               break;
             }
           }
@@ -353,6 +396,13 @@ GameController.defineMethod("showLevelLocationSplash", function () {
   splashElement.querySelector(".level-location-name").innerText = location.location;
   splashElement.querySelector(".level-location-coords").innerText =
     `${Math.abs(location.lat)}° ${location.lat >= 0 ? "N" : "S"}, ${Math.abs(location.lon)}° ${location.lon >= 0 ? "E" : "W"}`;
+
+  getJSONAsync(`https://en.wikipedia.org/w/api.php?format=json&origin=*&action=query&prop=extracts&exintro=&explaintext=&titles=${encodeURIComponent(location.location)}`)
+    .then(function (json) {
+      let pages = Object.values(json.query.pages);
+      if (pages.length > 0 && pages[0].extract)
+        splashElement.querySelector(".level-location-wikipedia.summary").innerText = pages[0].extract.substr(0, pages[0].extract.indexOf("\n"));
+    });
 
   setTimeout(function () {
     splashElement.classList.remove("hidden");
