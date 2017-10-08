@@ -99,6 +99,13 @@ GameController.defineMethod("init", function () {
 
   this.locMarkers = [];
 
+  if (!GameController.locMarkerIcon)
+    GameController.locMarkerIcon = L.icon({
+      iconUrl: "images/location-marker.png",
+      iconSize: [32, 32],
+      iconAnchor: [16, 16]
+    });
+
 });
 
 /**
@@ -236,6 +243,9 @@ GameController.defineMethod("selectLevel", function (level) {
   let promptElement = this.view.querySelector(`.prompt`);
 
   let levelStartTime;
+  let lastInteractionTime;
+
+  let autoMarkerRemovalInterval;
 
   waterfall = waterfall
     .then(function () {
@@ -249,16 +259,18 @@ GameController.defineMethod("selectLevel", function (level) {
       let multiplier = 0;
 
       for (let i = 0; i < locations.length; i++) {
-        let marker = L.marker([locations[i].lat, locations[i].lon]);
+        let marker = L.marker([locations[i].lat, locations[i].lon], {icon: GameController.locMarkerIcon});
         this.locMarkers.push(marker);
         marker.addTo(this.gameMap);
 
         marker.on("click", function () {
+          let time = new Date();
+
           if (i === 0) {
 
             document.getElementById("health").classList.remove("play");
 
-            let levelEndTime = new Date();
+            let levelEndTime = time;
             let timeRemaining = Math.max(0, 15 - ((levelEndTime - levelStartTime) / 1000 + multiplier * 0.05 * 15));
 
             // Record level stats
@@ -279,6 +291,9 @@ GameController.defineMethod("selectLevel", function (level) {
             document.getElementById("health").style.marginLeft = (-5 * multiplier) + "%";
 
           }
+
+          lastInteractionTime = time;
+
         }.bind(this));
 
       }
@@ -293,8 +308,23 @@ GameController.defineMethod("selectLevel", function (level) {
       document.getElementById("health").style.marginLeft = 0;
 
       levelStartTime = new Date();
+      lastInteractionTime = new Date();
 
-    }, 300);
+      autoMarkerRemovalInterval = setInterval(function () {
+        let time = new Date();
+
+        if (time - lastInteractionTime > 4000) {
+          for (let i = this.locMarkers.length - 1; i > 0; i--) {
+            if (this.locMarkers[i]._icon) {
+              this.locMarkers[i].remove();
+              break;
+            }
+          }
+          lastInteractionTime = time;
+        }
+      }.bind(this), 500);
+
+    }.bind(this), 300);
 
   return true; // Changed to the level selected
 
