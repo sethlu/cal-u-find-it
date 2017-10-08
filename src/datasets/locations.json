@@ -76,7 +76,7 @@
   {
     "question": [
       "Where is the oldest Chinatown in North America?",
-      "I am the place where most Chinese immigrants went to during the Chinese Migration"
+      "I am the place where most Chinese immigrants went to during the Chinese Migration."
     ],
     "location": "Chinatown (San Francisco)",
     "region": "Nor",
@@ -86,7 +86,7 @@
   },
   {
     "question": [
-      "Come visit me if you want to taste some good Chinese cuisine"
+      "Come visit me if you want to taste some good Chinese cuisine."
     ],
     "location": "Chinatown (Los Angeles)",
     "region": "LA",
@@ -199,7 +199,7 @@
   {
     "question": [
       "Where are the tallest trees in California located?",
-      "I preserve indigenous faunas and floras"
+      "I preserve indigenous faunas and floras."
     ],
     "location": "Redwood National and State Park",
     "region": "Nor",
