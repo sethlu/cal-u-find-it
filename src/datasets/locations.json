@@ -39,7 +39,7 @@
     "region": "Nor",
     "lat": 37.4275,
     "lon": -122.1697,
-    "image": ""
+    "image": "images/locations/stanford.jpg"
   },
   {
     "question": [
@@ -49,7 +49,7 @@
     "region": "LA",
     "lat": 33.8121,
     "lon": -117.919,
-    "image": ""
+    "image": "images/locations/disneyland.jpg"
   },
   {
     "question": [
@@ -59,7 +59,8 @@
     "region": "Nor",
     "lat": 37.8651,
     "lon": -119.5383,
-    "image": ""
+    "image": "images/locations/yosemite-national-park.jpeg",
+    "imageAttribution": "4nadia/Getty Images"
   },
   {
     "question": [
