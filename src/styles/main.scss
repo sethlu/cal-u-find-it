@@ -93,10 +93,11 @@ button {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
+  overflow: hidden;
 
   // Home
   &.home {
+    overflow-y: auto;
 
     > .map {
       width: 100%;
@@ -297,6 +298,7 @@ button {
 
   &.game-stats {
     padding: 2em 2em 3.5em 2em;
+    overflow-y: auto;
 
     .container {
       width: 40em;
